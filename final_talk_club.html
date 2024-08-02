@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mülheim am Main, Social Talk Club (2024)</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: #f0f0f0;
+        }
+
+        header,
+        footer {
+            background-color: #1b0dab;
+            color: white; /* Ensures header and footer text is white */
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+        }
+
+        nav button {
+            margin: 0 15px;
+            padding: 5px 15px;
+            border: none;
+            background-color: #ff9800;
+            color: white;
+            cursor: pointer;
+        }
+
+        nav button:hover {
+            background-color: #e68900;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h1 {
+            color: white; /* Ensures header text is white */
+        }
+
+        section {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0.1, 0.1, 0.1, 0.9);
+        }
+
+        .images {
+            display: flex;
+            gap: 5px;
+        }
+
+        .images img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .images img:hover {
+            transform: scale(1.1);
+        }
+
+        .contact-form {
+            margin-top: 20px;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form label {
+            margin: 10px 0 5px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            background-color: #1a0dab;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #0a0d82;
+        }
+
+        /* Space Background and Stars */
+        .space-background {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background: url('talk_peopl.png') no-repeat left center,
+                        url('Kontakt-Werk22.jpg') no-repeat center center,
+                        url('kontaktwerk-pk-4.jpg') no-repeat right center;
+            background-size: 33% 100%, 33% 100%, 33% 100%;
+            overflow: hidden;
+        }
+
+        /* Rotating Letters */
+        .letters-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rotating-letters {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            transform-origin: center;
+            animation: rotateLetters 10s linear infinite;
+        }
+
+        .rotating-letters span {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-origin: center;
+            opacity: 0;
+        }
+
+        /* Keyframes for rotating letters */
+        @keyframes rotateLetters {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Map Section */
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Optional: Set the height of the page */
+        html, body {
+            height: 200%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 1, 1, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .modal img {
+            width: 200%;
+            height: auto;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .modal-close:hover,
+        .modal-close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Language Switching Button */
+        .show-section-btn {
+            background-color: #1a0dab;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        .show-section-btn:hover {
+            background-color: #0b0d82;
+        }
+
+        .founders-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .founders-list li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mülheim am Main, Social Talk Club (2024)</h1>
+        <nav>
+            <a href="#home" data-en="Home" data-de="Startseite">Home</a>
+            <a href="#about" data-en="About" data-de="Über uns">About</a>
+            <a href="#mission" data-en="Mission" data-de="Mission">Mission</a>
+            <a href="#vision" data-en="Vision" data-de="Vision">Vision</a>
+            <a href="#join" data-en="Join" data-de="Mitglied werden">Join</a>
+            <a href="#founders" data-en="Founders" data-de="Gründer">Founders</a>
+            <a href="#map" data-en="Map" data-de="Karte">Map</a>
+            <a href="#events" data-en="Events" data-de="Veranstaltungen">Events</a>
+            <button data-lang="en">English</button>
+            <button data-lang="de">Deutsch</button>
+        </nav>
+    </header>
+
+    <div class="space-background">
+        <div class="letters-container">
+            <div class="rotating-letters">
+                <!-- Rotating letters -->
+                <span>A</span>
+                <span>B</span>
+                <span>C</span>
+                <span>D</span>
+                <span>E</span>
+                <span>F</span>
+                <span>G</span>
+                <span>H</span>
+                <span>I</span>
+                <span>J</span>
+                <span>K</span>
+                <span>L</span>
+                <span>M</span>
+                <span>N</span>
+                <span>O</span>
+                <span>P</span>
+                <span>Q</span>
+                <span>R</span>
+                <span>S</span>
+                <span>T</span>
+                <span>U</span>
+                <span>V</span>
+                <span>W</span>
+                <span>X</span>
+                <span>Y</span>
+                <span>Z</span>
+                <span>Ä</span>
+                <span>Ö</span>
+                <span>Ü</span>
+                <span>ß</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="home">
+            <h2 data-en="Home" data-de="Startseite">Home</h2>
+            <p data-en="Welcome to Social Talk Club" data-de="Willkommen im Social Talk Club">Welcome to Social Talk Club</p>
+        </section>
+
+        <section id="about">
+            <h2 data-en="About" data-de="Über uns">About</h2>
+            <p data-en="This is a social club where we engage in creative and thoughtful discussions." data-de="Dies ist ein sozialer Club, in dem wir kreative und nachdenkliche Diskussionen führen.">This is a social club where we engage in creative and thoughtful discussions.</p>
+        </section>
+
+        <section id="mission">
+            <h2 data-en="Mission" data-de="Mission">Mission</h2>
+            <p data-en="Our mission is to foster a community of engaged and enlightened individuals." data-de="Unsere Mission ist es, eine Gemeinschaft engagierter und erleuchteter Menschen zu fördern.">Our mission is to foster a community of engaged and enlightened individuals.</p>
+        </section>
+
+        <section id="vision">
+            <h2 data-en="Vision" data-de="Vision">Vision</h2>
+            <p data-en="We envision a world where open dialogue leads to better understanding and collaboration." data-de="Wir stellen uns eine Welt vor, in der offener Dialog zu besserem Verständnis und Zusammenarbeit führt.">We envision a world where open dialogue leads to better understanding and collaboration.</p>
+        </section>
+
+        <section id="join">
+            <h2 data-en="Join" data-de="Mitglied werden">Join</h2>
+            <p data-en="Become a member and take part in our events and discussions." data-de="Werden Sie Mitglied und nehmen Sie an unseren Veranstaltungen und Diskussionen teil.">Become a member and take part in our events and discussions.</p>
+            <p data-en="Join with signal chanals 'Talk Club' or talkclub_de@gmail.com". data-de="Treten Sie den Signal-Kanälen ‚Talk Club‘ bei oder kontaktieren Sie uns unter talkclub_de@gmail.com.">Join with signal chanals 'Talk Club' or talkclub_de@gmail.com.</p>
+            <p data-en="Phone: +4917625315666 or  0152/04459899". data-de="Phone: +4917625315666 or  0152/04459899.">Phone: +4917625315666 or  0152/04459899 </p>
+            <p  data-en=" 63165 Mühlheim a. M."> 63165 Mühlheim a. M.</p>
+        </section>
+
+        <section id="founders">
+            <h2 data-en="Founders" data-de="Gründer">Founders</h2>
+            <ul class="founders-list">
+                <li>Asmamaw Yehun (PhD, and software Engineering Student), founder of the club and website developer</li>
+                <li>Kerstin Wagner (AWO) founder of the club</li>
+                <li>Lidia Skumaj (AWO) founder of the club</li>
+                <li>Anna Bugaeva (AWO) founder of the club</li>
+                <li>Ahmad Tekko founder of the club</li>
+                <li>Abdullah D  founder of the club</li>
+                <li>Hassinara Muddin  founder of the club</li>
+            </ul>
+        </section>
+
+        <section id="map">
+            <h2 data-en="Map" data-de="Karte">Map</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2566.621154123139!2d8.8386474!3d50.1241549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd0e084b630d47%3A0x3a6743416620151b!2sKontakt-Werk!5e0!3m2!1sen!2sde!4v1654582624511!5m2!1sen!2sde" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
+        <section id="events">
+            <h2 data-en="Events" data-de="Veranstaltungen">Events</h2>
+            <p data-en="Check out our upcoming events on Every Friday from 15:00 - 16:00 hours, join us." data-de="Schau dir unsere kommenden Veranstaltungen auf Jeden Freitag von 15:00 bis 16:00 Uhr an und sei dabei.">Check out our upcoming events on Every Friday from 15:00 - 16:00 hours, join us.</p>
+        </section>
+
+        <section class="contact-form">
+            <h2 data-en="Contact Us" data-de="Kontaktieren Sie uns">Contact Us</h2>
+            <form>
+                <label for="name" data-en="Name" data-de="Name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email" data-en="Email" data-de="E-Mail">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message" data-en="Message" data-de="Nachricht">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" data-en="Send" data-de="Senden">Send</button>
+            </form>
+        </section>
+
+        <section>
+            <h2 data-en="Images" data-de="Bilder">Images</h2>
+            <div class="images">
+                <img src="kontaktwerk-pk-1.jpg" alt="Ikontaktwerk" onclick="openModal('kontaktwerk-pk-1.jpg')">
+                <img src="kontaktwerk-pk-44.jpg" alt="kontaktwerk" onclick="openModal('kontaktwerk-pk-44.jpg')">
+                <img src="kontaktwerk11.png" alt="kontaktwerk11" onclick="openModal('kontaktwerk11.png')">
+                <!-- Add more images as needed -->
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy;2024 Mülheim am Main, Social Talk Club. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script>
+        // Language switcher
+        document.querySelectorAll('button[data-lang]').forEach(button => {
+            button.addEventListener('click', function() {
+                const lang = this.getAttribute('data-lang');
+                document.querySelectorAll('[data-en]').forEach(el => {
+                    el.textContent = el.getAttribute(`data-${lang}`);
+                });
+            });
+        });
+
+        // Modal functionality
+        function openModal(src) {
+            document.getElementById('modal-img').src = src;
+            document.getElementById('myModal').style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        // Close modal when clicking outside of the image
+        window.addEventListener('click', function(event) {
+            if (event.target === document.getElementById('myModal')) {
+                closeModal();
+            }
+        });
+
+        // JavaScript for rotating letters
+        const letters = document.querySelectorAll('.rotating-letters span');
+        const totalLetters = letters.length;
+        const angle = 360 / totalLetters;
+
+        letters.forEach((letter, index) => {
+            letter.style.transform = `rotate(${angle * index}deg) translate(200px) rotate(-${angle * index}deg)`;
+            letter.style.opacity = '1';
+        });
+    </script>
+</body>
+</html>
