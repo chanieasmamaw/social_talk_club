@@ -1,0 +1,460 @@
+<html>
+<head>
+<title>index.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #c9a765;}
+.s1 { color: #9bc28e;}
+.s2 { color: #ded772; font-weight: bold;}
+.s3 { color: #c69557; font-weight: bold;}
+.s4 { color: #2bba2b; font-weight: bold;}
+.s5 { color: #d26666;}
+.s6 { color: #7abf44; font-weight: bold;}
+</style>
+</head>
+<body bgcolor="#404040">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+index.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;</span><span class="s3">html </span><span class="s2">lang</span><span class="s4">=&quot;en&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;</span><span class="s3">head</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;</span><span class="s3">meta </span><span class="s2">charset</span><span class="s4">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;</span><span class="s3">meta </span><span class="s2">name</span><span class="s4">=&quot;viewport&quot; </span><span class="s2">content</span><span class="s4">=&quot;width=device-width, initial-scale=1.0&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;</span><span class="s3">title</span><span class="s0">&gt;</span><span class="s1">Mülheim am Main, Social Talk Club (2024)</span><span class="s0">&lt;/</span><span class="s3">title</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;</span><span class="s3">style</span><span class="s0">&gt;</span>
+        <span class="s1">/* General Styles */</span>
+        <span class="s1">body {</span>
+            <span class="s1">font-family: Arial, sans-serif;</span>
+            <span class="s1">margin: 0;</span>
+            <span class="s1">padding: 0;</span>
+            <span class="s1">overflow-x: hidden;</span>
+            <span class="s1">background: #f0f0f0;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">header,</span>
+        <span class="s1">footer {</span>
+            <span class="s1">background-color: #1b0dab;</span>
+            <span class="s1">color: white; /* Ensures header and footer text is white */</span>
+            <span class="s1">text-align: center;</span>
+            <span class="s1">padding: 1em;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">nav {</span>
+            <span class="s1">text-align: center;</span>
+            <span class="s1">margin: 10px 0;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">nav a {</span>
+            <span class="s1">margin: 0 15px;</span>
+            <span class="s1">text-decoration: none;</span>
+            <span class="s1">color: white;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">nav button {</span>
+            <span class="s1">margin: 0 15px;</span>
+            <span class="s1">padding: 5px 15px;</span>
+            <span class="s1">border: none;</span>
+            <span class="s1">background-color: #ff9800;</span>
+            <span class="s1">color: white;</span>
+            <span class="s1">cursor: pointer;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">nav button:hover {</span>
+            <span class="s1">background-color: #e68900;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">.container {</span>
+            <span class="s1">padding: 20px;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">h1 {</span>
+            <span class="s1">color: white; /* Ensures header text is white */</span>
+        <span class="s1">}</span>
+
+        <span class="s1">section {</span>
+            <span class="s1">background: white;</span>
+            <span class="s1">margin: 20px 0;</span>
+            <span class="s1">padding: 20px;</span>
+            <span class="s1">border-radius: 8px;</span>
+            <span class="s1">box-shadow: 0 0 10px rgba(0.1, 0.1, 0.1, 0.9);</span>
+        <span class="s1">}</span>
+
+        <span class="s1">.images {</span>
+            <span class="s1">display: flex;</span>
+            <span class="s1">gap: 5px;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">.images img {</span>
+            <span class="s1">width: 100%;</span>
+            <span class="s1">height: auto;</span>
+            <span class="s1">object-fit: cover;</span>
+            <span class="s1">cursor: pointer;</span>
+            <span class="s1">border-radius: 8px;</span>
+            <span class="s1">transition: transform 0.2s;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">.images img:hover {</span>
+            <span class="s1">transform: scale(1.1);</span>
+        <span class="s1">}</span>
+
+        <span class="s1">.contact-form {</span>
+            <span class="s1">margin-top: 20px;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">.contact-form form {</span>
+            <span class="s1">display: flex;</span>
+            <span class="s1">flex-direction: column;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">.contact-form label {</span>
+            <span class="s1">margin: 10px 0 5px;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">.contact-form input,</span>
+        <span class="s1">.contact-form textarea {</span>
+            <span class="s1">padding: 10px;</span>
+            <span class="s1">margin-bottom: 10px;</span>
+            <span class="s1">border: 1px solid #ccc;</span>
+            <span class="s1">border-radius: 4px;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">.contact-form button {</span>
+            <span class="s1">padding: 10px;</span>
+            <span class="s1">background-color: #1a0dab;</span>
+            <span class="s1">color: white;</span>
+            <span class="s1">border: none;</span>
+            <span class="s1">border-radius: 4px;</span>
+            <span class="s1">cursor: pointer;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">.contact-form button:hover {</span>
+            <span class="s1">background-color: #0a0d82;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">/* Space Background and Stars */</span>
+        <span class="s1">.space-background {</span>
+            <span class="s1">position: relative;</span>
+            <span class="s1">width: 100%;</span>
+            <span class="s1">height: 500px;</span>
+            <span class="s1">background: url('talk_peopl.png') no-repeat left center,</span>
+                        <span class="s1">url('Kontakt-Werk22.jpg') no-repeat center center,</span>
+                        <span class="s1">url('kontaktwerk-pk-4.jpg') no-repeat right center;</span>
+            <span class="s1">background-size: 33% 100%, 33% 100%, 33% 100%;</span>
+            <span class="s1">overflow: hidden;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">/* Rotating Letters */</span>
+        <span class="s1">.letters-container {</span>
+            <span class="s1">position: absolute;</span>
+            <span class="s1">width: 100%;</span>
+            <span class="s1">height: 100%;</span>
+            <span class="s1">top: 0;</span>
+            <span class="s1">left: 0;</span>
+            <span class="s1">display: flex;</span>
+            <span class="s1">justify-content: center;</span>
+            <span class="s1">align-items: center;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">.rotating-letters {</span>
+            <span class="s1">position: absolute;</span>
+            <span class="s1">width: 100%;</span>
+            <span class="s1">height: 100%;</span>
+            <span class="s1">display: flex;</span>
+            <span class="s1">justify-content: center;</span>
+            <span class="s1">align-items: center;</span>
+            <span class="s1">font-size: 40px;</span>
+            <span class="s1">font-weight: bold;</span>
+            <span class="s1">color: white;</span>
+            <span class="s1">transform-origin: center;</span>
+            <span class="s1">animation: rotateLetters 10s linear infinite;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">.rotating-letters span {</span>
+            <span class="s1">position: absolute;</span>
+            <span class="s1">width: 50px;</span>
+            <span class="s1">height: 50px;</span>
+            <span class="s1">display: flex;</span>
+            <span class="s1">justify-content: center;</span>
+            <span class="s1">align-items: center;</span>
+            <span class="s1">transform-origin: center;</span>
+            <span class="s1">opacity: 0;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">/* Keyframes for rotating letters */</span>
+        <span class="s1">@keyframes rotateLetters {</span>
+            <span class="s1">0% {</span>
+                <span class="s1">transform: rotate(0deg);</span>
+            <span class="s1">}</span>
+            <span class="s1">100% {</span>
+                <span class="s1">transform: rotate(360deg);</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+
+        <span class="s1">/* Map Section */</span>
+        <span class="s1">#map {</span>
+            <span class="s1">height: 100%;</span>
+            <span class="s1">width: 100%;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">/* Optional: Set the height of the page */</span>
+        <span class="s1">html, body {</span>
+            <span class="s1">height: 200%;</span>
+            <span class="s1">margin: 0;</span>
+            <span class="s1">padding: 0;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">/* Modal Styles */</span>
+        <span class="s1">.modal {</span>
+            <span class="s1">display: none;</span>
+            <span class="s1">position: fixed;</span>
+            <span class="s1">z-index: 1;</span>
+            <span class="s1">left: 0;</span>
+            <span class="s1">top: 0;</span>
+            <span class="s1">width: 100%;</span>
+            <span class="s1">height: 100%;</span>
+            <span class="s1">overflow: auto;</span>
+            <span class="s1">background-color: rgba(0, 1, 1, 0.9);</span>
+        <span class="s1">}</span>
+
+        <span class="s1">.modal-content {</span>
+            <span class="s1">margin: auto;</span>
+            <span class="s1">display: block;</span>
+            <span class="s1">width: 80%;</span>
+            <span class="s1">max-width: 700px;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">.modal img {</span>
+            <span class="s1">width: 200%;</span>
+            <span class="s1">height: auto;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">.modal-close {</span>
+            <span class="s1">position: absolute;</span>
+            <span class="s1">top: 15px;</span>
+            <span class="s1">right: 35px;</span>
+            <span class="s1">color: #f1f1f1;</span>
+            <span class="s1">font-size: 40px;</span>
+            <span class="s1">font-weight: bold;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">.modal-close:hover,</span>
+        <span class="s1">.modal-close:focus {</span>
+            <span class="s1">color: #bbb;</span>
+            <span class="s1">text-decoration: none;</span>
+            <span class="s1">cursor: pointer;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">/* Language Switching Button */</span>
+        <span class="s1">.show-section-btn {</span>
+            <span class="s1">background-color: #1a0dab;</span>
+            <span class="s1">color: white;</span>
+            <span class="s1">border: none;</span>
+            <span class="s1">padding: 10px;</span>
+            <span class="s1">cursor: pointer;</span>
+            <span class="s1">margin: 10px 0;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">.show-section-btn:hover {</span>
+            <span class="s1">background-color: #0b0d82;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">.founders-list {</span>
+            <span class="s1">list-style-type: none;</span>
+            <span class="s1">padding: 0;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">.founders-list li {</span>
+            <span class="s1">margin: 10px 0;</span>
+        <span class="s1">}</span>
+    <span class="s0">&lt;/</span><span class="s3">style</span><span class="s0">&gt;</span>
+<span class="s0">&lt;/</span><span class="s3">head</span><span class="s0">&gt;</span>
+<span class="s0">&lt;</span><span class="s3">body</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;</span><span class="s3">header</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;</span><span class="s3">h1</span><span class="s0">&gt;</span><span class="s1">Mülheim am Main, Social Talk Club (2024)</span><span class="s0">&lt;/</span><span class="s3">h1</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;</span><span class="s3">nav</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">a </span><span class="s2">href</span><span class="s4">=&quot;#home&quot; </span><span class="s2">data-en</span><span class="s4">=&quot;Home&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Startseite&quot;</span><span class="s0">&gt;</span><span class="s1">Home</span><span class="s0">&lt;/</span><span class="s3">a</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">a </span><span class="s2">href</span><span class="s4">=&quot;#about&quot; </span><span class="s2">data-en</span><span class="s4">=&quot;About&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Über uns&quot;</span><span class="s0">&gt;</span><span class="s1">About</span><span class="s0">&lt;/</span><span class="s3">a</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">a </span><span class="s2">href</span><span class="s4">=&quot;#mission&quot; </span><span class="s2">data-en</span><span class="s4">=&quot;Mission&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Mission&quot;</span><span class="s0">&gt;</span><span class="s1">Mission</span><span class="s0">&lt;/</span><span class="s3">a</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">a </span><span class="s2">href</span><span class="s4">=&quot;#vision&quot; </span><span class="s2">data-en</span><span class="s4">=&quot;Vision&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Vision&quot;</span><span class="s0">&gt;</span><span class="s1">Vision</span><span class="s0">&lt;/</span><span class="s3">a</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">a </span><span class="s2">href</span><span class="s4">=&quot;#join&quot; </span><span class="s2">data-en</span><span class="s4">=&quot;Join&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Mitglied werden&quot;</span><span class="s0">&gt;</span><span class="s1">Join</span><span class="s0">&lt;/</span><span class="s3">a</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">a </span><span class="s2">href</span><span class="s4">=&quot;#founders&quot; </span><span class="s2">data-en</span><span class="s4">=&quot;Founders&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Gründer&quot;</span><span class="s0">&gt;</span><span class="s1">Founders</span><span class="s0">&lt;/</span><span class="s3">a</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">a </span><span class="s2">href</span><span class="s4">=&quot;#map&quot; </span><span class="s2">data-en</span><span class="s4">=&quot;Map&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Karte&quot;</span><span class="s0">&gt;</span><span class="s1">Map</span><span class="s0">&lt;/</span><span class="s3">a</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">a </span><span class="s2">href</span><span class="s4">=&quot;#events&quot; </span><span class="s2">data-en</span><span class="s4">=&quot;Events&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Veranstaltungen&quot;</span><span class="s0">&gt;</span><span class="s1">Events</span><span class="s0">&lt;/</span><span class="s3">a</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">button </span><span class="s2">data-lang</span><span class="s4">=&quot;en&quot;</span><span class="s0">&gt;</span><span class="s1">English</span><span class="s0">&lt;/</span><span class="s3">button</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">button </span><span class="s2">data-lang</span><span class="s4">=&quot;de&quot;</span><span class="s0">&gt;</span><span class="s1">Deutsch</span><span class="s0">&lt;/</span><span class="s3">button</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;/</span><span class="s3">nav</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;/</span><span class="s3">header</span><span class="s0">&gt;</span>
+
+    <span class="s0">&lt;</span><span class="s3">div </span><span class="s2">class</span><span class="s4">=&quot;space-background&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;</span><span class="s3">div </span><span class="s2">class</span><span class="s4">=&quot;letters-container&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">div </span><span class="s2">class</span><span class="s4">=&quot;rotating-letters&quot;</span><span class="s0">&gt;</span>
+                <span class="s5">&lt;!-- Rotating letters --&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">A</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">B</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">C</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">D</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">E</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">F</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">G</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">H</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">I</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">J</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">K</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">L</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">M</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">N</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">O</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">P</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">Q</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">R</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">S</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">T</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">U</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">V</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">W</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">X</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">Y</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">Z</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">Ä</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">Ö</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">Ü</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">span</span><span class="s0">&gt;</span><span class="s1">ß</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;/</span><span class="s3">div</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;/</span><span class="s3">div</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;/</span><span class="s3">div</span><span class="s0">&gt;</span>
+
+    <span class="s0">&lt;</span><span class="s3">div </span><span class="s2">class</span><span class="s4">=&quot;container&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;</span><span class="s3">section </span><span class="s2">id</span><span class="s4">=&quot;home&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">h2 </span><span class="s2">data-en</span><span class="s4">=&quot;Home&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Startseite&quot;</span><span class="s0">&gt;</span><span class="s1">Home</span><span class="s0">&lt;/</span><span class="s3">h2</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">p </span><span class="s2">data-en</span><span class="s4">=&quot;Welcome to Social Talk Club&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Willkommen im Social Talk Club&quot;</span><span class="s0">&gt;</span><span class="s1">Welcome to Social Talk Club</span><span class="s0">&lt;/</span><span class="s3">p</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;/</span><span class="s3">section</span><span class="s0">&gt;</span>
+
+        <span class="s0">&lt;</span><span class="s3">section </span><span class="s2">id</span><span class="s4">=&quot;about&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">h2 </span><span class="s2">data-en</span><span class="s4">=&quot;About&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Über uns&quot;</span><span class="s0">&gt;</span><span class="s1">About</span><span class="s0">&lt;/</span><span class="s3">h2</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">p </span><span class="s2">data-en</span><span class="s4">=&quot;This is a social club where we engage in creative and thoughtful discussions.&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Dies ist ein sozialer Club, in dem wir kreative und nachdenkliche Diskussionen führen.&quot;</span><span class="s0">&gt;</span><span class="s1">This is a social club where we engage in creative and thoughtful discussions.</span><span class="s0">&lt;/</span><span class="s3">p</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;/</span><span class="s3">section</span><span class="s0">&gt;</span>
+
+        <span class="s0">&lt;</span><span class="s3">section </span><span class="s2">id</span><span class="s4">=&quot;mission&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">h2 </span><span class="s2">data-en</span><span class="s4">=&quot;Mission&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Mission&quot;</span><span class="s0">&gt;</span><span class="s1">Mission</span><span class="s0">&lt;/</span><span class="s3">h2</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">p </span><span class="s2">data-en</span><span class="s4">=&quot;Our mission is to foster a community of engaged and enlightened individuals.&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Unsere Mission ist es, eine Gemeinschaft engagierter und erleuchteter Menschen zu fördern.&quot;</span><span class="s0">&gt;</span><span class="s1">Our mission is to foster a community of engaged and enlightened individuals.</span><span class="s0">&lt;/</span><span class="s3">p</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;/</span><span class="s3">section</span><span class="s0">&gt;</span>
+
+        <span class="s0">&lt;</span><span class="s3">section </span><span class="s2">id</span><span class="s4">=&quot;vision&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">h2 </span><span class="s2">data-en</span><span class="s4">=&quot;Vision&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Vision&quot;</span><span class="s0">&gt;</span><span class="s1">Vision</span><span class="s0">&lt;/</span><span class="s3">h2</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">p </span><span class="s2">data-en</span><span class="s4">=&quot;We envision a world where open dialogue leads to better understanding and collaboration.&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Wir stellen uns eine Welt vor, in der offener Dialog zu besserem Verständnis und Zusammenarbeit führt.&quot;</span><span class="s0">&gt;</span><span class="s1">We envision a world where open dialogue leads to better understanding and collaboration.</span><span class="s0">&lt;/</span><span class="s3">p</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;/</span><span class="s3">section</span><span class="s0">&gt;</span>
+
+        <span class="s0">&lt;</span><span class="s3">section </span><span class="s2">id</span><span class="s4">=&quot;join&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">h2 </span><span class="s2">data-en</span><span class="s4">=&quot;Join&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Mitglied werden&quot;</span><span class="s0">&gt;</span><span class="s1">Join</span><span class="s0">&lt;/</span><span class="s3">h2</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">p </span><span class="s2">data-en</span><span class="s4">=&quot;Become a member and take part in our events and discussions.&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Werden Sie Mitglied und nehmen Sie an unseren Veranstaltungen und Diskussionen teil.&quot;</span><span class="s0">&gt;</span><span class="s1">Become a member and take part in our events and discussions.</span><span class="s0">&lt;/</span><span class="s3">p</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">p </span><span class="s2">data-en</span><span class="s4">=&quot;Join with signal chanals 'Talk Club' or talkclub_de@gmail.com&quot;</span><span class="s2">. data-de</span><span class="s4">=&quot;Treten Sie den Signal-Kanälen ‚Talk Club‘ bei oder kontaktieren Sie uns unter talkclub_de@gmail.com.&quot;</span><span class="s0">&gt;</span><span class="s1">Join with signal chanals 'Talk Club' or talkclub_de@gmail.com.</span><span class="s0">&lt;/</span><span class="s3">p</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">p </span><span class="s2">data-en</span><span class="s4">=&quot;Phone: +4917625315666 or  0152/04459899&quot;</span><span class="s2">. data-de</span><span class="s4">=&quot;Phone: +4917625315666 or  0152/04459899.&quot;</span><span class="s0">&gt;</span><span class="s1">Phone: +4917625315666 or  0152/04459899 </span><span class="s0">&lt;/</span><span class="s3">p</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">p  </span><span class="s2">data-en</span><span class="s4">=&quot; 63165 Mühlheim a. M.&quot;</span><span class="s0">&gt; </span><span class="s1">63165 Mühlheim a. M.</span><span class="s0">&lt;/</span><span class="s3">p</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;/</span><span class="s3">section</span><span class="s0">&gt;</span>
+
+        <span class="s0">&lt;</span><span class="s3">section </span><span class="s2">id</span><span class="s4">=&quot;founders&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">h2 </span><span class="s2">data-en</span><span class="s4">=&quot;Founders&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Gründer&quot;</span><span class="s0">&gt;</span><span class="s1">Founders</span><span class="s0">&lt;/</span><span class="s3">h2</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">ul </span><span class="s2">class</span><span class="s4">=&quot;founders-list&quot;</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">li</span><span class="s0">&gt;</span><span class="s1">Asmamaw Yehun (PhD, and software Engineering Student), founder of the club and website developer</span><span class="s0">&lt;/</span><span class="s3">li</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">li</span><span class="s0">&gt;</span><span class="s1">Kerstin Wagner (AWO) founder of the club</span><span class="s0">&lt;/</span><span class="s3">li</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">li</span><span class="s0">&gt;</span><span class="s1">Lidia Skumaj (AWO) founder of the club</span><span class="s0">&lt;/</span><span class="s3">li</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">li</span><span class="s0">&gt;</span><span class="s1">Anna Bugaeva (AWO) founder of the club</span><span class="s0">&lt;/</span><span class="s3">li</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">li</span><span class="s0">&gt;</span><span class="s1">Ahmad Tekko founder of the club</span><span class="s0">&lt;/</span><span class="s3">li</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">li</span><span class="s0">&gt;</span><span class="s1">Abdullah D  founder of the club</span><span class="s0">&lt;/</span><span class="s3">li</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">li</span><span class="s0">&gt;</span><span class="s1">Hassinara Muddin  founder of the club</span><span class="s0">&lt;/</span><span class="s3">li</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;/</span><span class="s3">ul</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;/</span><span class="s3">section</span><span class="s0">&gt;</span>
+
+        <span class="s0">&lt;</span><span class="s3">section </span><span class="s2">id</span><span class="s4">=&quot;map&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">h2 </span><span class="s2">data-en</span><span class="s4">=&quot;Map&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Karte&quot;</span><span class="s0">&gt;</span><span class="s1">Map</span><span class="s0">&lt;/</span><span class="s3">h2</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">iframe </span><span class="s2">src</span><span class="s4">=&quot;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2566.621154123139!2d8.8386474!3d50.1241549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd0e084b630d47%3A0x3a6743416620151b!2sKontakt-Werk!5e0!3m2!1sen!2sde!4v1654582624511!5m2!1sen!2sde&quot; </span><span class="s2">width</span><span class="s4">=&quot;100%&quot; </span><span class="s2">height</span><span class="s4">=&quot;450&quot; </span><span class="s2">style</span><span class="s4">=&quot;border:0;&quot; </span><span class="s2">allowfullscreen</span><span class="s4">=&quot;&quot; </span><span class="s2">loading</span><span class="s4">=&quot;lazy&quot;</span><span class="s0">&gt;&lt;/</span><span class="s3">iframe</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;/</span><span class="s3">section</span><span class="s0">&gt;</span>
+
+        <span class="s0">&lt;</span><span class="s3">section </span><span class="s2">id</span><span class="s4">=&quot;events&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">h2 </span><span class="s2">data-en</span><span class="s4">=&quot;Events&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Veranstaltungen&quot;</span><span class="s0">&gt;</span><span class="s1">Events</span><span class="s0">&lt;/</span><span class="s3">h2</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">p </span><span class="s2">data-en</span><span class="s4">=&quot;Check out our upcoming events on Every Friday from 15:00 - 16:00 hours, join us.&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Schau dir unsere kommenden Veranstaltungen auf Jeden Freitag von 15:00 bis 16:00 Uhr an und sei dabei.&quot;</span><span class="s0">&gt;</span><span class="s1">Check out our upcoming events on Every Friday from 15:00 - 16:00 hours, join us.</span><span class="s0">&lt;/</span><span class="s3">p</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;/</span><span class="s3">section</span><span class="s0">&gt;</span>
+
+        <span class="s0">&lt;</span><span class="s3">section </span><span class="s2">class</span><span class="s4">=&quot;contact-form&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">h2 </span><span class="s2">data-en</span><span class="s4">=&quot;Contact Us&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Kontaktieren Sie uns&quot;</span><span class="s0">&gt;</span><span class="s1">Contact Us</span><span class="s0">&lt;/</span><span class="s3">h2</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">form</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">label </span><span class="s2">for</span><span class="s4">=&quot;name&quot; </span><span class="s2">data-en</span><span class="s4">=&quot;Name&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Name&quot;</span><span class="s0">&gt;</span><span class="s1">Name:</span><span class="s0">&lt;/</span><span class="s3">label</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">input </span><span class="s2">type</span><span class="s4">=&quot;text&quot; </span><span class="s2">id</span><span class="s4">=&quot;name&quot; </span><span class="s2">name</span><span class="s4">=&quot;name&quot; </span><span class="s2">required</span><span class="s0">&gt;</span>
+
+                <span class="s0">&lt;</span><span class="s3">label </span><span class="s2">for</span><span class="s4">=&quot;email&quot; </span><span class="s2">data-en</span><span class="s4">=&quot;Email&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;E-Mail&quot;</span><span class="s0">&gt;</span><span class="s1">Email:</span><span class="s0">&lt;/</span><span class="s3">label</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">input </span><span class="s2">type</span><span class="s4">=&quot;email&quot; </span><span class="s2">id</span><span class="s4">=&quot;email&quot; </span><span class="s2">name</span><span class="s4">=&quot;email&quot; </span><span class="s2">required</span><span class="s0">&gt;</span>
+
+                <span class="s0">&lt;</span><span class="s3">label </span><span class="s2">for</span><span class="s4">=&quot;message&quot; </span><span class="s2">data-en</span><span class="s4">=&quot;Message&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Nachricht&quot;</span><span class="s0">&gt;</span><span class="s1">Message:</span><span class="s0">&lt;/</span><span class="s3">label</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">textarea </span><span class="s2">id</span><span class="s4">=&quot;message&quot; </span><span class="s2">name</span><span class="s4">=&quot;message&quot; </span><span class="s2">rows</span><span class="s4">=&quot;4&quot; </span><span class="s2">required</span><span class="s0">&gt;&lt;/</span><span class="s3">textarea</span><span class="s0">&gt;</span>
+
+                <span class="s0">&lt;</span><span class="s3">button </span><span class="s2">type</span><span class="s4">=&quot;submit&quot; </span><span class="s2">data-en</span><span class="s4">=&quot;Send&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Senden&quot;</span><span class="s0">&gt;</span><span class="s1">Send</span><span class="s0">&lt;/</span><span class="s3">button</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;/</span><span class="s3">form</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;/</span><span class="s3">section</span><span class="s0">&gt;</span>
+
+        <span class="s0">&lt;</span><span class="s3">section</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">h2 </span><span class="s2">data-en</span><span class="s4">=&quot;Images&quot; </span><span class="s2">data-de</span><span class="s4">=&quot;Bilder&quot;</span><span class="s0">&gt;</span><span class="s1">Images</span><span class="s0">&lt;/</span><span class="s3">h2</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;</span><span class="s3">div </span><span class="s2">class</span><span class="s4">=&quot;images&quot;</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">img </span><span class="s2">src</span><span class="s4">=&quot;kontaktwerk-pk-1.jpg&quot; </span><span class="s2">alt</span><span class="s4">=&quot;Ikontaktwerk&quot; </span><span class="s2">onclick</span><span class="s4">=&quot;openModal('kontaktwerk-pk-1.jpg')&quot;</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">img </span><span class="s2">src</span><span class="s4">=&quot;kontaktwerk-pk-44.jpg&quot; </span><span class="s2">alt</span><span class="s4">=&quot;kontaktwerk&quot; </span><span class="s2">onclick</span><span class="s4">=&quot;openModal('kontaktwerk-pk-44.jpg')&quot;</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;</span><span class="s3">img </span><span class="s2">src</span><span class="s4">=&quot;kontaktwerk11.png&quot; </span><span class="s2">alt</span><span class="s4">=&quot;kontaktwerk11&quot; </span><span class="s2">onclick</span><span class="s4">=&quot;openModal('kontaktwerk11.png')&quot;</span><span class="s0">&gt;</span>
+                <span class="s5">&lt;!-- Add more images as needed --&gt;</span>
+            <span class="s0">&lt;/</span><span class="s3">div</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;/</span><span class="s3">section</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;/</span><span class="s3">div</span><span class="s0">&gt;</span>
+
+    <span class="s0">&lt;</span><span class="s3">footer</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;</span><span class="s3">p</span><span class="s0">&gt;</span><span class="s6">&amp;copy;</span><span class="s1">2024 Mülheim am Main, Social Talk Club. All rights reserved.</span><span class="s0">&lt;/</span><span class="s3">p</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;/</span><span class="s3">footer</span><span class="s0">&gt;</span>
+
+    <span class="s5">&lt;!-- Modal --&gt;</span>
+    <span class="s0">&lt;</span><span class="s3">div </span><span class="s2">id</span><span class="s4">=&quot;myModal&quot; </span><span class="s2">class</span><span class="s4">=&quot;modal&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;</span><span class="s3">span </span><span class="s2">class</span><span class="s4">=&quot;modal-close&quot; </span><span class="s2">onclick</span><span class="s4">=&quot;closeModal()&quot;</span><span class="s0">&gt;</span><span class="s6">&amp;times;</span><span class="s0">&lt;/</span><span class="s3">span</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;</span><span class="s3">img </span><span class="s2">class</span><span class="s4">=&quot;modal-content&quot; </span><span class="s2">id</span><span class="s4">=&quot;modal-img&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;/</span><span class="s3">div</span><span class="s0">&gt;</span>
+
+    <span class="s0">&lt;</span><span class="s3">script</span><span class="s0">&gt;</span>
+        <span class="s1">// Language switcher</span>
+        <span class="s1">document.querySelectorAll('button[data-lang]').forEach(button =&gt; {</span>
+            <span class="s1">button.addEventListener('click', function() {</span>
+                <span class="s1">const lang = this.getAttribute('data-lang');</span>
+                <span class="s1">document.querySelectorAll('[data-en]').forEach(el =&gt; {</span>
+                    <span class="s1">el.textContent = el.getAttribute(`data-${lang}`);</span>
+                <span class="s1">});</span>
+            <span class="s1">});</span>
+        <span class="s1">});</span>
+
+        <span class="s1">// Modal functionality</span>
+        <span class="s1">function openModal(src) {</span>
+            <span class="s1">document.getElementById('modal-img').src = src;</span>
+            <span class="s1">document.getElementById('myModal').style.display = &quot;block&quot;;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">function closeModal() {</span>
+            <span class="s1">document.getElementById('myModal').style.display = &quot;none&quot;;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">// Close modal when clicking outside of the image</span>
+        <span class="s1">window.addEventListener('click', function(event) {</span>
+            <span class="s1">if (event.target === document.getElementById('myModal')) {</span>
+                <span class="s1">closeModal();</span>
+            <span class="s1">}</span>
+        <span class="s1">});</span>
+
+        <span class="s1">// JavaScript for rotating letters</span>
+        <span class="s1">const letters = document.querySelectorAll('.rotating-letters span');</span>
+        <span class="s1">const totalLetters = letters.length;</span>
+        <span class="s1">const angle = 360 / totalLetters;</span>
+
+        <span class="s1">letters.forEach((letter, index) =&gt; {</span>
+            <span class="s1">letter.style.transform = `rotate(${angle * index}deg) translate(200px) rotate(-${angle * index}deg)`;</span>
+            <span class="s1">letter.style.opacity = '1';</span>
+        <span class="s1">});</span>
+    <span class="s0">&lt;/</span><span class="s3">script</span><span class="s0">&gt;</span>
+<span class="s0">&lt;/</span><span class="s3">body</span><span class="s0">&gt;</span>
+<span class="s0">&lt;/</span><span class="s3">html</span><span class="s0">&gt;</span>
+</pre>
+</body>
+</html>
